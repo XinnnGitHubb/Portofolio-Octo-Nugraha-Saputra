@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Octo Nugraha Saputra — Freelance Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Octo Nugraha Saputra, freelance full-stack developer crafting liquid-smooth web, mobile & cloud experiences." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+
+<!-- AURORA BACKGROUND -->
+<div class="wallpaper" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <div class="grain"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+</div>
+
+<!-- BOOT / LOADER -->
+<div class="boot" id="boot">
+  <div class="boot-logo"></div>
+  <div class="boot-bar"><span id="bootBar"></span></div>
+  <p>Loading portfolio…</p>
+</div>
+
+<!-- MENU BAR -->
+<header class="menubar glass-strong">
+  <div class="menubar-left">
+    <img src="PP.png" alt="Octo" class="nav-avatar" onerror="this.style.display='none'"/>
+    <span class="menubar-app">Octofolio <b>Pro</b></span>
+  </div>
+  <div class="menubar-right">
+    <span class="menubar-clock" id="menuClock">—</span>
+  </div>
+</header>
+
+<!-- SPOTLIGHT -->
+<div class="spotlight-overlay" id="spotlightOverlay">
+  <div class="spotlight glass-strong">
+    <div class="spotlight-input-row">
+      <span>⌕</span>
+      <input id="spotlightInput" placeholder="Spotlight Search — type 'work', 'contact', 'fiverr'..." autocomplete="off" />
+      <kbd>esc</kbd>
+    </div>
+    <div class="spotlight-results" id="spotlightResults"></div>
+  </div>
+</div>
+
+<main class="stage">
+
+  <!-- HERO WINDOW -->
+  <section class="hero-wrap" id="top">
+    <div class="window glass hero-window" data-tilt>
+      <div class="traffic">
+        <span class="t red" data-action="close" title="Close"></span>
+        <span class="t yellow" data-action="minimize" title="Minimize"></span>
+        <span class="t green" data-action="zoom" title="Zoom"></span>
+        <div class="traffic-tabs">
+          <span class="tab active">✦ octo — portfolio.swift</span>
+          <span class="tab">● terminal</span>
+        </div>
+        <div class="traffic-actions">
+          <button class="mini-btn" id="hireTopBtn">Hire Me</button>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="hero-identity">
+            <img src="PP.png" alt="Octo Nugraha Saputra" onerror="this.style.display='none'"/>
+            <div class="hero-identity-txt"><b>Octo Nugraha Saputra</b><span><i></i> Available for freelance</span></div>
+            <div class="hello-pill">👋 Hello, I'm</div>
+          </div>
+          <h1>Octo Nugraha<br><span class="grad-text">Saputra</span></h1>
+          <h2 class="typed-line"><span id="typed"></span><span class="caret">▍</span></h2>
+          <p class="lede">Freelance <b>Full-Stack Developer</b> crafting liquid-smooth web apps, mobile apps & cloud systems. I turn fuzzy ideas into shipped, scalable products — fast.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">✉️ Hire Me</a>
+            <a href="#work" class="btn btn-glass">View Work ↓</a>
+            <button type="button" class="btn btn-glass" id="reviewBtn">Leave a review</button>
+          </div>
+          <div class="hero-stats">
+            <div><b data-count="48">0</b><span>Projects shipped</span></div>
+            <div><b data-count="32">0</b><span>Happy clients</span></div>
+            <div><b data-count="5">0</b><span>Years freelance</span></div>
+            <div><b id="avgRating">☆ 0.0</b><span>Avg. rating</span></div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="code-card glass">
+            <div class="code-head">
+              <span>● ● ●</span><em>freelancer.ts — zsh</em>
+            </div>
+<pre><code><span class="k">const</span> <span class="v">developer</span> = {
+  name: <span class="s">'Octo Nugraha Saputra'</span>,
+  role: <span class="s">'Freelance Full-Stack'</span>,
+  based: <span class="s">'Indonesia • Remote 🌍'</span>,
+  stack: [<span class="s">'React'</span>, <span class="s">'Next.js'</span>, <span class="s">'Node'</span>, <span class="s">'Flutter'</span>],
+  passion: <span class="s">'pixel-perfect + performant'</span>,
+  hireable: <span class="b">true</span>
+};
+
+<span class="k">await</span> octo.<span class="f">ship</span>(yourIdea); <span class="c">// ⚡ in weeks, not months</span></code></pre>
+            <div class="code-foot">
+              <span class="status"><i></i> building in public</span>
+              <span>⦿ 99.9% uptime mindset</span>
+            </div>
+          </div>
+
+          <div class="widget-row">
+            <div class="widget glass">
+              <small>LOCAL TIME</small>
+              <b id="localTime">--:--</b>
+              <span>Jakarta (GMT+7)</span>
+            </div>
+            <div class="widget glass">
+              <small>RESPONSE TIME</small>
+              <b>&lt; 24h</b>
+              <span>usually ~3 hrs ⚡</span>
+            </div>
+            <div class="widget glass accent">
+              <small>NEXT SLOT</small>
+              <b>2 spots left</b>
+              <span>for November →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee glass">
+      <div class="marquee-track">
+        <span>React • Next.js • TypeScript • Node.js • Flutter • Kotlin • Python • Go • PostgreSQL • AWS • Docker • Figma • Framer Motion •</span>
+        <span>React • Next.js • TypeScript • Node.js • Flutter • Kotlin • Python • Go • PostgreSQL • AWS • Docker • Figma • Framer Motion •</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <p class="eyebrow">01 — About</p>
+    <h2 class="title">Designer mind,<br><span class="grad-text">engineer discipline.</span></h2>
+    <div class="grid-2">
+      <div class="card glass reveal">
+        <div class="avatar-ring"><img class="avatar-img" src="PP.png" alt="Octo Nugraha Saputra" onerror="this.remove()"/><div class="avatar">OS</div></div>
+        <h3>Freelancer, not an agency.</h3>
+        <p>You chat directly with me — no middlemen. I do discovery, design polish, clean code, deployment, and aftercare, all via Fiverr chat + email. One owner from idea to Play Store.</p>
+        <ul class="checklist">
+          <li>✓ Product-minded: I ask <i>why</i> before <i>how</i></li>
+          <li>✓ Clean architecture, tested, documented</li>
+          <li>✓ Async-friendly: Notion / Loom / GitHub updates</li>
+          <li>✓ Timezone overlap EU / US / APAC</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">🌍 Remote-first</span>
+          <span class="chip">💬 EN / ID</span>
+          <span class="chip">🛡️ NDA-friendly</span>
+        </div>
+      </div>
+      <div class="stack-cards">
+        <div class="card glass reveal">
+          <h4>⚡ What I do best</h4>
+          <div class="bars">
+            <div class="bar"><label>Frontend (React / Next.js)</label><div class="track"><i style="--w:96%"></i></div></div>
+            <div class="bar"><label>Backend (Node / Go / Python)</label><div class="track"><i style="--w:92%"></i></div></div>
+            <div class="bar"><label>Mobile (Flutter / Kotlin)</label><div class="track"><i style="--w:88%"></i></div></div>
+            <div class="bar"><label>UI / Motion (Figma → Code)</label><div class="track"><i style="--w:90%"></i></div></div>
+          </div>
+        </div>
+        <div class="card glass reveal">
+          <h4>🧰 Toolbox</h4>
+          <div class="tool-grid">
+            <span>TypeScript</span><span>React</span><span>Next.js</span><span>Tailwind</span><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Firebase</span><span>Flutter</span><span>Kotlin</span><span>Docker</span><span>AWS</span>
+          </div>
+          <p class="muted">Need something else? I learn stacks fast — recent: Rust + Tauri, Elixir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK / SERVICES MINI -->
+  <section id="stack" class="section">
+    <p class="eyebrow">02 — Capabilities</p>
+    <h2 class="title">Full-stack, <span class="grad-text">end-to-end.</span></h2>
+    <div class="grid-4">
+      <div class="card glass reveal hover-lift"><div class="icon">🖥️</div><h3>Web Apps</h3><p>Next.js SaaS, dashboards, e-commerce. SEO, 95+ Lighthouse, i18n ready.</p><span class="tag">React • Next • Astro</span></div>
+      <div class="card glass reveal hover-lift"><div class="icon">📱</div><h3>Mobile Apps</h3><p>Flutter & native Android. Play Store release, push, offline-first.</p><span class="tag">Flutter • Kotlin</span></div>
+      <div class="card glass reveal hover-lift"><div class="icon">⚙️</div><h3>Backend & Cloud</h3><p>APIs, auth, payments, queues. Deployed on AWS / GCP with CI/CD.</p><span class="tag">Node • Go • Postgres</span></div>
+      <div class="card glass reveal hover-lift"><div class="icon">✨</div><h3>UI / Motion</h3><p>Liquid-glass design systems, micro-interactions, prototyping in Figma.</p><span class="tag">Figma • Motion</span></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section">
+    <p class="eyebrow">03 — Selected Work</p>
+    <div class="section-head">
+      <h2 class="title">Shipped & <span class="grad-text">loved.</span></h2>
+      <div class="filter-row">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="mobile">Mobile</button>
+        <button class="filter" data-filter="desktop">Desktop</button>
+      </div>
+    </div>
+    <div class="grid-3" id="projectGrid">
+      <article class="card glass project reveal hover-lift" data-tilt data-tilt-max="2.5" data-cat="web">
+        <div class="thumb thumb-img lb-trigger" data-full="Web Liquid Glass About me Pharmacy.png" data-title="Octo.far — Student Portfolio Website" tabindex="0" role="button" title="Click to enlarge"><img src="Web Liquid Glass About me Pharmacy.png" alt="Octo.far website screenshot" loading="lazy"/><span>Octo.far</span><em>Personal Project</em><i class="zoom">⤢</i></div>
+        <h3>Octo.far — Student Portfolio Website</h3>
+        <p>Personal portfolio for a pharmacy student. Glassmorphism hero, academic sections (Profil, Akademik, Keahlian, Karya, Kontak) + YouTube integration. Fully responsive.</p>
+        <div class="meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </article>
+      <!-- CARA TAMBAH PROJECT BARU (buat kamu):
+        1. Copy block <article> di atas, paste di bawah sini.
+        2. Ganti data-cat: "web" / "mobile" / "desktop"
+           (kalau tambah "desktop", tambah juga tombol filter Desktop di atas)
+        3. Ganti thumb (t1-t6), judul, deskripsi 1-2 kalimat hasil, dan tag stack.
+        CONTOH mobile:
+        <article class="card glass project reveal hover-lift" data-tilt data-tilt-max="2.5" data-cat="mobile">
+          <div class="thumb t4"><span>NamaApp</span><em>APK Demo</em></div>
+          <h3>NamaApp — Reminder Tugas Kampus</h3>
+          <p>...</p>
+          <div class="meta"><span>Flutter</span><span>...</span></div>
+        </article>
+      -->
+      <article class="card glass project reveal hover-lift" data-tilt data-tilt-max="2.5" data-cat="desktop">
+        <div class="thumb thumb-img lb-trigger" data-title="Apotek Stock & Cashier — Desktop Pharmacy App" data-gallery="Foto/Screenshot 2026-10-15 205004.png|Foto/Screenshot 2026-10-15 204917.png|Foto/Screenshot 2026-10-15 204920.png|Foto/Screenshot 2026-10-15 204934.png|Foto/Screenshot 2026-10-15 204936.png|Foto/Screenshot 2026-10-15 204944.png|Foto/Screenshot 2026-10-15 204948.png" data-captions="Sales dashboard|Barcode cashier + basket|Customer screen mirror|Payment + live EDC mirror|Card payment screen|Receipt printing|Payment success" tabindex="0" role="button" title="Click to view gallery (7 shots)"><img src="Foto/Screenshot 2026-10-15 205004.png" alt="Pharmacy stock and cashier app dashboard" loading="lazy"/><span>Apotek POS</span><em>Desktop App • 7 shots</em><i class="zoom">⤢</i></div>
+        <h3>Apotek Stock & Cashier — Desktop App</h3>
+        <p>Cashier + inventory for a pharmacy: sales dashboard, barcode cashier with auto stock-cut, live customer screen, Cash / QRIS / Card-EDC payments, receipt printing, low-stock & expiry alerts.</p>
+        <div class="meta"><span>Desktop</span><span>POS</span><span>Inventory</span></div>
+      </article>
+      <div class="card glass" id="projectEmpty" hidden>
+        <p><b>More projects coming soon.</b> <span class="muted">Mobile app menyusul.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE + TESTIMONIALS -->
+  <section class="section grid-2">
+    <div>
+      <p class="eyebrow">04 — Experience</p>
+      <h2 class="title">Trusted by<br><span class="grad-text">founders worldwide.</span></h2>
+      <div class="timeline">
+        <div class="tl-item glass reveal"><span>2023 — Now</span><h4>Freelance Full-Stack Developer</h4><p>48+ projects for startups in US, EU & SG. Specializing in MVP → PMF sprints.</p></div>
+        <div class="tl-item glass reveal"><span>2021 — 2023</span><h4>Senior Frontend Engineer — Fintech</h4><p>Led design-system & trading dashboard used by 200k users.</p></div>
+        <div class="tl-item glass reveal"><span>2019 — 2021</span><h4>Mobile Developer — Agency</h4><p>Shipped 12 Android apps, 2 Play Store Editors' Choice features.</p></div>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">05 — Love notes</p>
+      <h2 class="title">Clients say <span class="grad-text">it best.</span></h2>
+      <div id="testiList"></div>
+      <div class="testi glass reveal in" id="testiEmpty" hidden>
+        <p><b>No reviews yet.</b> <span class="muted">Finish your first job, then your client's rating will appear here automatically.</span></p>
+      </div>
+      <form id="reviewForm" class="card glass" hidden>
+        <h4>Leave a review</h4>
+        <div class="row">
+          <label>Name<input required name="name" placeholder="Client name" maxlength="60"/></label>
+          <label>Role<input name="role" placeholder="CEO, Company • City" maxlength="80"/></label>
+        </div>
+        <label>Rating
+          <div class="stars-input" id="starsInput">
+            <button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5">★</button>
+          </div>
+        </label>
+        <label>Message<textarea required name="message" rows="3" maxlength="500" placeholder="How was working together?"></textarea></label>
+        <button class="btn btn-primary full" type="submit">Submit review</button>
+        <p class="muted small" id="reviewNote">Reviews go to moderation first, then appear here automatically.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- SERVICES + PRICING -->
+  <section id="services" class="section">
+    <p class="eyebrow">06 — Services</p>
+    <h2 class="title">Pick your <span class="grad-text">mission.</span></h2>
+    <div class="grid-3">
+      <div class="card glass reveal hover-lift">
+        <h3>🌐 Portfolio Website</h3>
+        <p class="muted">Personal, landing & company-profile websites. Responsive, fast, glass-style polish.</p>
+        <ul class="checklist"><li>✓ Design + build + deploy</li><li>✓ Contact & social integration</li><li>✓ Revisions via Fiverr chat</li></ul>
+        <a class="btn btn-glass full" href="https://www.fiverr.com/s/bkkWqda" target="_blank" rel="noopener">Check on Fiverr →</a>
+      </div>
+      <div class="card glass reveal hover-lift featured">
+        <div class="pop">MOST POPULAR</div>
+        <h3>💊 Cashier Desktop App</h3>
+        <p class="muted">Cashier + stock desktop apps for small shops & pharmacies. Barcode-ready.</p>
+        <ul class="checklist"><li>✓ Sales dashboard & stock</li><li>✓ Cash / QRIS / Card + customer screen</li><li>✓ Low-stock & expiry alerts</li></ul>
+        <a class="btn btn-primary full" href="https://www.fiverr.com/s/AGGl7VB" target="_blank" rel="noopener">Check on Fiverr →</a>
+      </div>
+      <div class="card glass reveal hover-lift">
+        <h3>💬 Custom Request</h3>
+        <p class="muted">Something else in mind? A tweak, a fix, or a brand-new idea — just ask.</p>
+        <ul class="checklist"><li>✓ Describe it via Fiverr inbox</li><li>✓ Fixed custom offer</li><li>✓ Same chat-only process</li></ul>
+        <a class="btn btn-glass full" href="https://www.fiverr.com/s/9ddX1oY" target="_blank" rel="noopener">Chat on Fiverr →</a>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:14px;text-align:center">Pricing & packages live on Fiverr — <a href="https://www.fiverr.com/s/9ddX1oY" target="_blank" rel="noopener" style="text-decoration:underline">view profile →</a></p>
+  </section>
+
+  <section id="pricing" class="section">
+    <div class="card glass reveal process">
+      <h3>How we'll work — simple & transparent</h3>
+      <div class="steps">
+        <div><b>01</b><span>Chat brief via Fiverr</span><p>We align on goals, scope & vibe through messages.</p></div>
+        <div><b>02</b><span>Custom offer via Fiverr</span><p>Scope, timeline & milestones — all inside Fiverr.</p></div>
+        <div><b>03</b><span>Weekly shipped demos</span><p>You see progress every Friday. Always.</p></div>
+        <div><b>04</b><span>Launch + care</span><p>Deploy, handover docs & support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <p class="eyebrow">07 — Contact</p>
+    <h2 class="title">Let's build something<br><span class="grad-text">liquid-smooth.</span></h2>
+    <div class="grid-2">
+      <div class="card glass reveal">
+        <h3>Tell me about your project</h3>
+        <form id="contactForm">
+          <div class="row">
+            <label>Name<input required name="name" placeholder="Jane Cooper" /></label>
+            <label>Email<input required type="email" name="email" placeholder="jane@company.com" /></label>
+          </div>
+          <label>Project details<textarea required name="msg" rows="4" placeholder="What are you building? Timeline? Links?"></textarea></label>
+          <button class="btn btn-primary full" type="submit">Send Message</button>
+          <p class="muted small" id="formNote">Avg. reply in ~3 hours. No spam, ever.</p>
+        </form>
+      </div>
+      <div class="stack-cards">
+        <div class="card glass reveal contact-side">
+          <h3>Prefer direct?</h3>
+          <a class="contact-line" href="mailto:kyyzen123@gmail.com">📧 kyyzen123@gmail.com</a>
+          <a class="contact-line" href="https://www.fiverr.com/s/9ddX1oY" target="_blank" rel="noopener">🟢 Fiverr — view profile</a>
+          <a class="contact-line" href="https://github.com/XinnnGitHubb" target="_blank" rel="noopener">🐙 GitHub — @XinnnGitHubb</a>
+          <a class="contact-line" href="https://t.me/DCXinnn" target="_blank" rel="noopener">✈️ Telegram — @DCXinnn</a>
+        </div>
+        <div class="card glass reveal">
+          <h4>⚖️ Freelance promise</h4>
+          <p class="muted">Fixed price • Weekly demos • You own 100% IP & code • 14-day bug-fix warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer glass">
+    <span>© 2026 Octo Nugraha Saputra • Crafted with coffee & pixel-perfect polish</span>
+    <span class="footer-links"><a href="#top">Back to top ↑</a> • <a href="#work">Work</a> • <a href="#contact">Contact</a></span>
+  </footer>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" hidden>
+  <div class="lightbox glass-strong" role="dialog" aria-modal="true">
+    <div class="lightbox-head"><b id="lbTitle">Preview</b><div class="lb-nav"><span id="lbCount" class="muted small">1/1</span><button id="lbPrev" title="Previous">‹</button><button id="lbNext" title="Next">›</button><button id="lbClose" title="Close">✕</button></div></div>
+    <img id="lbImg" src="" alt="Project preview"/>
+    <div class="lightbox-foot">
+      <span class="muted small" id="lbCap">Screenshot preview</span>
+      <!-- NANTI: tambah link asli di sini, contoh:
+      <a class="btn btn-primary" href="PASTE_LIVE_DEMO_URL" target="_blank" rel="noopener">Live Demo →</a>
+      <a class="btn btn-glass" href="PASTE_GITHUB_URL" target="_blank" rel="noopener">GitHub</a>
+      -->
+    </div>
+  </div>
+</div>
+
+<!-- DOCK -->
+<nav class="dock glass-strong" id="dock">
+  <a href="#top" data-label="Finder • Home">🏠</a>
+  <a href="#about" data-label="About">👨‍💻</a>
+  <a href="#stack" data-label="Stack">🛠️</a>
+  <a href="#work" data-label="Work">💼</a>
+  <a href="#services" data-label="Services">🚀</a>
+  <a href="#contact" data-label="Contact">✉️</a>
+  <span class="dock-sep"></span>
+  <a href="#" onclick="return false" data-label="Search (Ctrl+K)" id="dockSearch">⌕</a>
+  <a href="#" onclick="return false" data-label="Terminal" id="dockTerminal">💻</a>
+</nav>
+
+<!-- TERMINAL TOAST -->
+<div class="terminal-toast glass-strong" id="terminalToast">
+  <p><b>octo@portfolio</b>:~$ whoami</p>
+  <p class="out">freelance full-stack developer — open for Q4 projects ✨</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
